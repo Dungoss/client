@@ -13,6 +13,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import './index.css';
+import IconBack from '../../assets/images/back.png';
 
 function Copyright(props) {
     return (
@@ -50,8 +51,8 @@ export default function Login() {
 
     return (
         <div className="root">
-            <Link href="/" variant="body2">
-                Trang chủ
+            <Link href="/" variant="body2" style={{position: 'fixed', top: '0px'}}>
+                <img src={IconBack} style={{width: '50px', height: '50px'}}></img>
             </Link>
             <div className="cover">
                 <ThemeProvider theme={theme}>
@@ -123,7 +124,9 @@ export default function Login() {
                                     </Grid>
                                 </Grid>
                                 <Button type="submit" fullWidth variant="contained" sx={{ mt: 3, mb: 2 }}>
-                                    Đăng nhập
+                                    <Link href='/' style={{textDecoration: 'none', color: '#ffffff'}}>
+                                        Đăng nhập
+                                    </Link>                                   
                                 </Button>
                                 <Grid container justifyContent="flex-end">
                                     <Grid item>
